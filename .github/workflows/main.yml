@@ -17,7 +17,8 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v4
         with:
-          context: DockerFileFolder/
+          context: docker build -t $DOCKERHUB_USERNAME/$IMAGE_NAME .
+
           push: true
           tags: suraj645/testrepo:latest
 
